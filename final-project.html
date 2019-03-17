@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- initial settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>世界のおいしいコーヒー豆を紹介するサイト</title>
+    <!-- bootstrap settings -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/final-project.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <!-- マップのCSSを読み込ませている -->
+    <link rel="stylesheet" type="text/css" href="cssmap-continents/cssmap-continents.css" media="screen" />
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container-fluid" style="padding: 0px;">
+
+        <nav class="col-12 navbar navbar-toggleable-md navbar-inverse navbar-light bg-warning" style="min-height: 60px;">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="max-height: 40px;">
+                <span class="navbar-toggler-icon" style="display: flex; justify-content: center; align-items: center;"></span>
+                <a class="navbar-brand" href="#">
+
+                </a>
+            </button>
+
+            <div class="collapse navbar-collapse bg-warning" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#navbarSupportedContent">HOME
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" id="navbarDropdownMenuLink"
+                            aria-haspopup="true" aria-expanded="false">
+                            coffee type
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#Blue mountain">ブルーマウンテン</a>
+                            <a class="dropdown-item" href="#Hawaikona">ハワイコナ</a>
+                            <a class="dropdown-item" href="#Costa Rica">コスタリカ</a>
+                            <a class="dropdown-item" href="#Kopi Luwak">コピルアク</a>
+                            <a class="dropdown-item" href="#Java">ジャワ</a>
+                            <a class="dropdown-item" href="#Manderin">マンデリン</a>
+                            <a class="dropdown-item" href="#Brazil">ブラジル</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" id="navbarDropdownMenuLink"
+                            aria-haspopup="true" aria-expanded="false">
+                            country name
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">ブラジル</a>
+                            <a class="dropdown-item" href="#">ジャワ島</a>
+                            <a class="dropdown-item" href="#">ブルーマウンテン</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group">
+                        <input class="form-control mr-sm-2" type="text" placeholder="country name">
+                    </div>
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+            </div>
+        </nav>
+
+
+        <div class="col-12 country">
+            <div class="jumbotron col-12">
+                <h1 class="display-4">世界のおいしいコーヒー豆を紹介するサイト</h1>
+                <hr class="my-1">
+                <p class="lead display-10" style="height: 50px;">世界地図の国をクリックするとその国の有名な豆が表示されます</p>
+            </div>
+            <!-- CSSMap - Continents -->
+            <div id="map-continents">
+                <ul class="continents">
+                    <li class="c1"><a href="#africa">Africa</a></li>
+                    <li class="c2"><a href="#asia">Asia</a></li>
+                    <li class="c3"><a href="#australia">Australia</a></li>
+                    <li class="c4"><a href="#europe">Europe</a></li>
+                    <li class="c5"><a href="#north-america">North America</a></li>
+                    <li class="c6"><a href="#south-america">South America</a></li>
+                </ul>
+            </div>
+            <!-- END OF THE CSSMap - Continents -->
+        </div>
+
+        <section class="bg">
+            <div class="row bean">
+                <div class="col-md-5 my-bg" style="background-image: url(./img/Bluemountain.jpg)"></div>
+
+                <div class="my-text col-md-7 align-self-center">
+                    <style>
+                        @import url('https://fonts.googleapis.com/css?family=Satisfy');
+                                </style>
+                    <h1>ブルーマウンテン</h1> 卓越した香気を持ち、調和の取れた味わい、軽い口当りと滑らかな咽越しが特徴。最高級の品質と呼ばれています。<br>ジャマイカで生産されるコーヒーのうちごく一部の産地のものがブルーマウンテンとブランド付けられています。<br>その中でもさらにランク付けがなされています。
+                    <button type="button" class="btn btn-outline-info">View details</button>
+                </div>
+
+            </div>
+
+            <div class="row d-flex no-wrap bean">
+
+                <div class="col-md-5 my-bg flex-md-last" style="background-image: url(./img/Hawaikona.jpg">
+                </div>
+                <div class="my-text col-md-7 align-self-center flex-md-first p-3">
+                    <h1>ハワイコナ</h1>非常に強い酸味とコク・風味を持つ。ブレンドに用いると良質な酸味が与えられると<br>言われ、ブルーマウンテンに次ぐブランドで高価である。
+                    <button type="button" class="btn btn-outline-info">View details</button>
+                </div>
+            </div>
+
+            <div class="row bean">
+                <div class="col-md-5 my-bg" style="background-image: url(./img/CostaRica.jpg)"></div>
+
+                <div class="my-text col-md-7 align-self-center">
+                    <h1>コスタリカ</h1>どちらかというと酸味系で苦味控えめの味わい、軽めでクリアな飲み口。
+                    <button type="button" class="btn btn-outline-info">View details</button>
+                </div>
+
+            </div>
+
+            <div class="row d-flex no-wrap bean">
+
+                <div class="col-md-5 my-bg flex-md-last" style="background-image: url(./img/KopiLuwak.jpg">
+                </div>
+                <div class="my-text col-md-7 align-self-center flex-md-first p-3">
+                    <h1>コピルアク</h1>酸味は弱く、苦みが強い傾向。さらに独特の甘みもあり、奥行きのある味わい。
+                    <button type="button" class="btn btn-outline-info">View details</button>
+                </div>
+            </div>
+
+            <div class="row bean">
+                <div class="col-md-5 my-bg" style="background-image: url(./img/Java.jpg)"></div>
+                <div class="my-text col-md-7 align-self-center">
+                    <h1>ジャワ</h1>ジャワ島産の主にアラビカ種コーヒーを指す。かつての大産地でモカとブレンドしたモカジャバは最初のブレンドといわれるが、<br>葉さび病と経済恐慌で産地が大打撃を受けて以降は産出量が少なく目にすることはまれである。現在手に入るものは丸くマイルドな味。<br>ジャワ島は専らアイスコーヒー・エスプレッソ・工業用に使用されるロブスタ種の主要な産地であるため、<br>限定してアラビカ種を指す場合はジャワ・アラビカともいう。
+                    <button type="button" class="btn btn-outline-info">View details</button>
+                </div>
+
+            </div>
+
+            <div class="row d-flex no-wrap bean">
+
+                <div class="col-md-5 my-bg flex-md-last" style="background-image: url(./img/Manderin.jpg">
+                </div>
+                <div class="my-text col-md-7 align-self-center flex-md-first p-3">
+                    <h1>マンデリン</h1>スマトラ島産。苦味とコクを中心とした味わい、酸味はなく独特な後味がある。日本ではブルーマウンテンが現れるまでは<br>世界一と評されていました。
+                    <button type="button" class="btn btn-outline-info">View details</button>
+                </div>
+            </div>
+
+            <div class="row bean">
+                <div class="col-md-5 my-bg" style="background-image: url(./img/Brazil.jpg)"></div>
+                <div class="my-text col-md-7 align-self-center">
+                    <h1>ブラジル</h1>香りの甘さが軽快で酸味・コク、苦みともに軽くバランスが良い。安価でありブレンドのベースとして多く使われる。
+                    <button type="button" class="btn btn-outline-info">View details</button>
+                </div>
+
+            </div>
+
+
+            <a class="btn btn-info btn-lg btn-block" href="#top" style="text-decoration-line: none; display: flex; justify-content: center">Go
+                to top</a>
+
+    </div>
+
+    </section>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- CSSMap SCRIPT -->
+    <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // CSSMap;
+            $("#map-continents").CSSMap({
+                "size": 1450,
+                "mapStyle": "vintage",
+                "cities": true,
+                "tooltips": "sticky",
+                "responsive": "auto",
+                "fitHeight": true
+            });
+            // END OF THE CSSMap;
+
+        });
+    </script>
+
+    <script>
+        // .beanクラスにアニメーションを付与している。
+        $(function () {
+            $(".bean").css("opacity", "0");
+            $(".bean").on({
+                'mouseout': function () {
+                    $(this).stop(true).animate({
+                        opacity: 0,
+                        fontSize: 0
+                    }, 1000);
+                },
+                'mouseover': function () {
+                    $(this).stop(true).animate({
+                        opacity: 1,
+                        fontSize: 16
+                    }, 1000)
+                }
+            })
+        })
+    </script>
+
+</body>
+<footer>
+
+</footer>
+
+</html>

@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+}
+
+div .country{
+    width: 100%;
+    min-height: 500px;
+    background-size:contain;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333;
+    border: 2px solid #000;
+    padding: 0px;
+    overflow: hidden;
+}
+
+div .country .row{
+    width: 70%;
+}
+
+
+.my-bg{
+    min-height: 150px;
+    background-size:cover;
+    background-position: center center;
+    box-shadow: 1px 1px 3px #333;
+    border: 2px solid #000;
+    color: white;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 1rem;
+}
+
+.bg{
+    background-color: crimson;
+}
+
+.my-text{
+    color: gold;
+    font-size: 1rem;
+    font-family: 'Satisfy', cursive;
+}
